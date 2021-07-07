@@ -18,7 +18,7 @@ namespace lecture5
         public string SurName;
         public int Age;
 
-        //statinis kintamasis
+        //statinis kintamasis. STATIC YRA KLASES SAVYBE. ne static yra per klase sukurto objekto savybe
         public static int PersonCount;
 
         public void SayHello()
