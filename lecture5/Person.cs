@@ -22,5 +22,19 @@ namespace lecture5
         {
             Console.WriteLine($"{Name} {SurName} {Age}");
         }
+
+        // konstruktorius yra klases dalis ir kvieciamas kaip metodas klases iskvietimo metu. jis egzistuoja by default, bet yra tuscias
+        // sukurus, konstruktoriu galim panaudoti tik paduodant su parametrais
+        public Person(string name, string surname, int age)
+        {
+            Name = name;
+            Age = age;
+            SurName = surname;
+        }
+
+        // galima sukurti daugiau nei viena konstruktoriu. Jei be parametru, tai tada sukuriam tuscia ir bus galima
+        public Person()
+        {
+        }
     }
 }
