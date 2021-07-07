@@ -18,6 +18,9 @@ namespace lecture5
         public string SurName;
         public int Age;
 
+        //statinis kintamasis
+        public static int PersonCount;
+
         public void SayHello()
         {
             Console.WriteLine($"{Name} {SurName} {Age}");
@@ -30,11 +33,17 @@ namespace lecture5
             Name = name;
             Age = age;
             SurName = surname;
+            //statinis kitnamasis, kuris skaiciuoja, kiek kartu buvo panaudotas konstruktorius
+            PersonCount++;
         }
 
         // galima sukurti daugiau nei viena konstruktoriu. Jei be parametru, tai tada sukuriam tuscia ir bus galima
-        public Person()
+        public Person(string Name)
         {
+            //this pointina i butent toje klaseje esanti kitnamaji
+            this.Name = Name;
         }
+
+        // static naudojamas kuriant statinius metodas. jis yra klases metodas ir jo nereikia inicializuoti. negalima pasiekti ne'static fieldo
     }
 }

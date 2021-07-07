@@ -26,6 +26,20 @@ namespace lecture5
             person4.SayHello();
             Console.WriteLine("------------------Kitas asmuo---------------------");
             person5.SayHello();
+
+            ;
+            Person[] vardai = new Person[] { person1, person2, person3, person4, person5 };
+            //daro lygiai ta pati. var pasikeicia i 'Person[]'
+            //var vardai = new Person[] { person1, person2, person3, person4, person5 }
+
+            foreach (var person in vardai)
+            {
+                Console.WriteLine($"{person.Name} {person.SurName} {person.Age}");
+            }
+
+            Console.WriteLine(Calculator.Add(5, 6));
+            // issaukiam kiek susikure tu Personu kuriant
+            Console.WriteLine(Person.PersonCount);
         }
     }
 
